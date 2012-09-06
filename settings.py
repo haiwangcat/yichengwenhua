@@ -11,12 +11,23 @@ DATABASES['default'] = {'ENGINE': 'dbindexer', 'TARGET': 'native'}
 AUTOLOAD_SITECONF = 'indexes'
 
 SECRET_KEY = '=r-$b*8hglm+858&9t043hlm6-&6-3d3vfc4((7yd0dbrakhvi'
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
+ADMINS = (
+    # ('Your Name', 'your_email@domain.com'),
+)
 
-from os import path
+MANAGERS = ADMINS
 
-MEDIA_ROOT = path.join(path.abspath(path.dirname(__file__)), 'media')
-STATIC_ROOT = path.join(path.abspath(path.dirname(__file__)), 'static')
+LANGUAGES = [('en', 'en')]
+DEFAULT_LANGUAGE = 0
+
+USE_I18N = True
+USE_L10N = True
+
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'media')
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
 
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
@@ -43,6 +54,11 @@ INSTALLED_APPS = (
 
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
+)
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 )
 
 MIDDLEWARE_CLASSES = (

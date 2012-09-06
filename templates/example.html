@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load cms_tags sekizai_tags menu_tags %}
+
+{% block "title" %}{{ request.current_page.get_title }}{% endblock %}
+
+{% block "content" %}
+
+
+{% placeholder "main" %}
+
+<div style="text-align: center; font-size:0.8em; font-family:Verdana, Arial, sans-serif;">
+    {% placeholder "text" %}
+    {% placeholder "photos" %}
+</div>
+
+{% endblock %}
