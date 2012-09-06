@@ -3,7 +3,7 @@ from wsgi import *
 from django.contrib.auth.models import User
 import sys
 
-sys.path.append('gallery')
+sys.path.append('yichengwenhua')
 
 u, created = User.objects.get_or_create(username='cong')
 if created:
