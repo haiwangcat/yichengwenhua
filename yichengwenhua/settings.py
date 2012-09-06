@@ -124,7 +124,7 @@ CMS_TEMPLATES = (
     ('opening.html', 'Opening Template'),
 )
 
-ROOT_URLCONF = 'gallery.urls'
+ROOT_URLCONF = 'yichengwenhua.urls'
 
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
