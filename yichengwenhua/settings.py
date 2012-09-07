@@ -121,6 +121,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 CMS_TEMPLATES = (
     ('index.html', 'Index Template'),
     ('opening.html', 'Opening Template'),
+    ('main.html', 'Main Template'),
 )
 
 ROOT_URLCONF = 'yichengwenhua.urls'
