@@ -267,6 +267,9 @@ ul.dropdown li:hover > ul {
 
 .text-area h3 {
     margin: 0.8em 0 0.5em 0;
+    padding: 10px 0 10px 10px;
+    color: yellow;
+    background-color: #c97436;
 }
 
 #sidebar {
