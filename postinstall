@@ -3,5 +3,5 @@ python yichengwenhua/manage.py syncdb --all --noinput
 python yichengwenhua/manage.py migrate --fake
 python mkadmin.py
 mkdir -p /home/dotcloud/data/media /home/dotcloud/data/static
-python yichengwenhua/manage.py collectstatic --noinput
 cp -r /home/dotcloud/code/yichengwenhua/static /home/dotcloud/data
+python yichengwenhua/manage.py collectstatic --noinput
