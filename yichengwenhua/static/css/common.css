@@ -266,7 +266,7 @@ ul.dropdown li:hover > ul {
     padding-bottom: 20px;
 }
 
-.text-area p, .text-area h4 {
+#content-main>p, #content-main h4 {
     margin: 0.8em 0 0.5em 0;
     line-height: 150%;
     padding-right: 10px;
@@ -303,6 +303,19 @@ ul.dropdown li:hover > ul {
 
 .text-area a:hover h3 {
     color: yellow;
+}
+
+.text-area table {
+    text-align: center;
+}
+
+.text-area table td {
+    padding: 10px;
+}
+
+.text-area table, .text-area table td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 #sidebar {

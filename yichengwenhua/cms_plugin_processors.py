@@ -19,6 +19,8 @@ def process_heritage_text(instance, placeholder, rendered_content, original_cont
     
     div = dom.childNodes[0]
     for child in div.childNodes:
+        if child.__class__.__name__ == 'Text': continue
+        #print dir(child)
         if child.tagName == 'h3':
             #counter = counter + 1
             
