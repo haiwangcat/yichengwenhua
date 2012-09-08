@@ -4,6 +4,19 @@
     font-family: Verdana, "黑体", Arial, sans-serif;
 }
 
+html,body,p,div,img,h1,h2,h3,h4,li,ul,ol,dl,dd,dt,form,table,td,tr {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    border-collapse:separate;
+    border-spacing:0px;
+}
+
+input,select {
+    margin:0;
+    padding:0;
+}
+
 div {
     display: block;
 }
@@ -260,8 +273,8 @@ ul.dropdown li:hover > ul {
 }
 
 .text-area #heritage-title {
-    margin: 0.8em 0 0.5em 0;
-    padding: 0.8em 0 0.8em 1em;
+    margin: 10px 0 0 0;
+    padding: 10px 0 10px 20px;
     background-color: #c97436;
     color: yellow;
     font-family: Verdana, "黑体", Arial, sans-serif;
@@ -274,10 +287,13 @@ ul.dropdown li:hover > ul {
 }
 
 #content-main h3 {
-    margin: 0.8em 0 0.5em 0;
     padding: 10px 0 10px 10px;
     background-color: #c97436;
     font-weight: normal;
+}
+
+.section-title {
+    margin: 10px 0 10px 0;
 }
 
 .text-area a {
