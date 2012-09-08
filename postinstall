@@ -1,5 +1,4 @@
 #!/bin/sh
-mkdir -p /home/dotcloud/data/media /home/dotcloud/data/static
 cp -r /home/dotcloud/code/yichengwenhua/static /home/dotcloud/data
 python yichengwenhua/manage.py syncdb --all --noinput
 python yichengwenhua/manage.py migrate --fake

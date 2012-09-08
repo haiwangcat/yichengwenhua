@@ -307,6 +307,7 @@ ul.dropdown li:hover > ul {
 #sidebar {
     text-align: center;
     float: left;
+    display: inline;
     width: 290px;
     height: 100%;
     background-color: #9c181b;
@@ -339,6 +340,7 @@ ul.dropdown li:hover > ul {
 
 #content-main {
     float: right;
+    display: inline;
     width: 750px;
 }
 
