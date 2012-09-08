@@ -12,18 +12,15 @@ def process_heritage_text(instance, placeholder, rendered_content, original_cont
     begin = unicode("<foo>")
     end = unicode("</foo>")
     
-    print rendered_content.__class__.__name__
-    
     str = begin + unicode(rendered_content) + end
     dom = xml.dom.minidom.parseString(str.encode('utf-8'))
-    
-    
-    counter = 0
+
+    #counter = 0
     
     div = dom.childNodes[0]
     for child in div.childNodes:
         if child.tagName == 'h3':
-            counter = counter + 1
+            #counter = counter + 1
             
             newDiv = dom.createElement('div')
             newDiv.setAttribute('class', 'section-title')

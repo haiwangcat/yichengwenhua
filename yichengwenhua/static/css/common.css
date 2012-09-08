@@ -259,12 +259,13 @@ ul.dropdown li:hover > ul {
     font-family: Verdana, "黑体", Arial, sans-serif;
 }
 
-.text-area h1, .text-area h2 {
+.text-area #heritage-title {
     margin: 0.8em 0 0.5em 0;
     padding: 0.8em 0 0.8em 1em;
     background-color: #c97436;
     color: yellow;
     font-family: Verdana, "黑体", Arial, sans-serif;
+    font-size:25px;
     font-weight: normal;
 }
 
