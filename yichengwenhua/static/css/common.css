@@ -263,6 +263,7 @@ ul.dropdown li:hover > ul {
     border-color: #c97436;
     border-style: none solid none solid;
     border-width:1px;
+    padding-bottom: 20px;
 }
 
 .text-area p, .text-area h4 {
@@ -293,7 +294,7 @@ ul.dropdown li:hover > ul {
 }
 
 .section-title {
-    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
 }
 
 .text-area a {
