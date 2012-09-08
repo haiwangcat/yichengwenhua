@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Verdana, "黑体", Arial, sans-serif;
 }
 
 div {
@@ -251,10 +252,11 @@ ul.dropdown li:hover > ul {
     border-width:1px;
 }
 
-.text-area p {
+.text-area p, .text-area h4 {
     margin: 0.8em 0 0.5em 0;
     line-height: 150%;
     padding-right: 10px;
+    font-family: Verdana, "黑体", Arial, sans-serif;
 }
 
 .text-area h1, .text-area h2 {
@@ -266,11 +268,14 @@ ul.dropdown li:hover > ul {
     font-weight: normal;
 }
 
-.text-area h3 {
+#content-main>h3 {
+    color: white;
+}
+
+#content-main h3 {
     margin: 0.8em 0 0.5em 0;
     padding: 10px 0 10px 10px;
     background-color: #c97436;
-    color: white;
     font-weight: normal;
 }
 
@@ -278,9 +283,8 @@ ul.dropdown li:hover > ul {
     color: white;
 }
 
-.text-area a:hover {
+.text-area a:hover h3 {
     color: yellow;
-    text-decoration:underline;
 }
 
 #sidebar {

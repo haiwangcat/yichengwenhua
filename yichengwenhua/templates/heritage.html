@@ -41,39 +41,27 @@
 {% endcomment %}
     
     <div class="text-area">
+    
         <div id="sidebar">
             {% show_menu 1 1 0 100 %}
         </div>
+        
         <div id="content-main">
-            {% placeholder "text" %}
+            {% placeholder "heritage-image" %}
+            {% placeholder "heritage-text" %}
         </div>
             
   
     <script>window.onload = (function(){
-        try{
-            $("button").click(function () {
-              $("#test-p").slideToggle("fast");
-            });
-
-        }catch(e){}
-        
-        //$('h3').wrap('<a class="title-button" href="#"> /');
-     
-        var counter = 0;
-        $("h3").each(function() {
-          var title_id = 'section-title' + counter;
-          var content_id = 'section-content' + counter;
-          $(this).wrap('<div id="' + title_id + '" />').wrap('<a/ href="javascript:;">');
-          $("#" + title_id).nextUntil("h3").addClass(content_id);
-          $("." + content_id).slideToggle("fast");
-          ++counter;
-          
-          $("#" + title_id).click(function () {
-              $("." + content_id).slideToggle("fast");
-            });
-          
+            
+        $(".section-title").each(function() {
+            try {
+            $(this).nextUntil(".section-title").slideToggle("fast");
+            $(this).click(function () {
+                $(this).nextUntil(".section-title").slideToggle("fast");
+            }); 
+            }catch(e){}
         });
-        //$("h3").nextUntil("h3").wrap('<div class="content" />');
 
         });
     </script>
