@@ -9,9 +9,11 @@
         <link href="{{ STATIC_URL }}css/index.css" media="screen" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ STATIC_URL }}libs/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="{{ STATIC_URL }}libs/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+        <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet">
     {% endaddtoblock %}
 
     {% addtoblock "js" %}
+        <script type="text/javascript" src="{{ STATIC_URL }}libs/jquery/js/jquery-ui-1.8.23.custom.min.js"></script>
         <script src="{{ STATIC_URL }}libs/nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(window).load(function() {
@@ -21,7 +23,12 @@
         		
 		<script src="{{ STATIC_URL }}libs/Kwicks-1.5.1/js/jquery.kwicks-1.5.1.pack.js" type="text/javascript"></script>
 		<script type="text/javascript">
+            $(function(){
+                $("#tabs").tabs();
+            })
+            
 			$().ready(function() {
+                
 				$('.kwicks').kwicks({
 					max : 400,
 					spacing : 5
@@ -40,16 +47,37 @@
     </div>   
 {% endcomment %}
     
-    <div class="text-area">
+    <div class="main-area">
     
         <div id="sidebar">
             {% show_menu 1 1 0 100 %}
         </div>
         
         <div id="content-main">
-            <div id="heritage-title">{{ request.current_page.get_title }}</div>
-            {% placeholder "heritage-image" %}
-            {% placeholder "heritage-text" %}
+            
+            <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+                <div id="heritage-title">{{ request.current_page.get_title }}</div>
+                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1">介绍</a></li>
+                    <li class="ui-state-default ui-corner-top"><a href="#tabs-2">图片</a></li>
+                    <li class="ui-state-default ui-corner-top"><a href="#tabs-3">视频</a></li>
+                </ul>
+                <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+                    {% placeholder "heritage-image" %}
+                    {% placeholder "heritage-text" or %}很抱歉，目前没有相关视频。{% endplaceholder %}
+                </div>
+                <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+                    {% placeholder "heritage-picture" or %}很抱歉，目前没有相关图片。{% endplaceholder %}
+                </div>
+                <div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                    <div>
+                    {% placeholder "heritage-video" or %}很抱歉，目前没有相关视频。{% endplaceholder %}
+                    </div>
+                </div>
+            </div>
+        
+        
+         
         </div>
             
   
@@ -57,9 +85,8 @@
             
         $(".section-title").each(function() {
             try {
-            $(this).nextUntil(".section-title").slideToggle("fast");
             $(this).click(function () {
-                $(this).nextUntil(".section-title").slideToggle("fast");
+                $(this).next().slideToggle("400", "swing");
             }); 
             }catch(e){}
         });

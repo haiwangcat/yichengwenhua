@@ -15,14 +15,20 @@ def process_heritage_text(instance, placeholder, rendered_content, original_cont
     str = begin + unicode(rendered_content) + end
     dom = xml.dom.minidom.parseString(str.encode('utf-8'))
 
-    #counter = 0
+    counter = 0
+    
+    toRemove = []
     
     div = dom.childNodes[0]
+    newSpan = dom.createElement('div')
+    newSpan.setAttribute('class', 'content-text')
+    div.insertBefore(newSpan, div.childNodes[0])
+            
     for child in div.childNodes:
         if child.__class__.__name__ == 'Text': continue
         #print dir(child)
         if child.tagName == 'h3':
-            #counter = counter + 1
+            counter = counter + 1
             
             newDiv = dom.createElement('div')
             newDiv.setAttribute('class', 'section-title')
@@ -35,11 +41,21 @@ def process_heritage_text(instance, placeholder, rendered_content, original_cont
             newDiv.appendChild(a)
             
             div.replaceChild(newDiv, child)
-        '''
-        elif child.tagName == 'p':
-            if counter == 0: continue
-            child.setAttribute('class', 'section-content' + unicode(counter))
-        '''
+                        
+            newSpan = dom.createElement('div')
+            newSpan.setAttribute('class', 'content-text')
+            div.insertBefore(newSpan, newDiv.nextSibling)
+            
+        elif child.tagName != 'div':
+            #if counter == 0: continue
+            newSpan.appendChild(child.cloneNode(True))
+            toRemove.append((div, child))
+            #div.removeChild(child)
+            #child.setAttribute('class', 'section-content' + unicode(counter))
+            
+    for (parent, child) in toRemove:
+        parent.removeChild(child)
+        
         
     output = dom.toxml()
     output = output.split(begin)[-1].split(end)[0]
