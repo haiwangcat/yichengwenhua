@@ -104,7 +104,7 @@ body a {
     padding-bottom:5px;
     //text-align:center;
     background-color:#9c181b;
-    background-image:url(/static/img/ycwh/jianzhi.png);
+    //background-image:url(/static/img/ycwh/jianzhi.png);
     background-position:center;
     background-repeat:no-repeat;
     font-size:17px;
@@ -120,7 +120,7 @@ body a {
     
 #menu .menuitem{
     //display:table-cell;
-    width:100px;
+    width:108px;
     //overflow:hidden;
 }
 
@@ -272,7 +272,7 @@ ul.dropdown li:hover > ul {
 .main-area {
     overflow: auto;
 	width: 1078px;
-    border-color: #c97436;
+    border-color: #9c181b;
     border-style: none solid none solid;
     border-width:1px;
     padding-bottom: 20px;
@@ -292,9 +292,11 @@ ul.dropdown li:hover > ul {
     display: none;
 }
 
-.main-area #heritage-title {
+#heritage-title {
     padding: 10px 0 10px 20px;
     background-color: #c97436;
+    border-top: 1px solid #9c181b;
+    border-left: 1px solid #9c181b;
     color: yellow;
     font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
     font-size:25px;

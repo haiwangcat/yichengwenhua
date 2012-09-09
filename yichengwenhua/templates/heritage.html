@@ -62,14 +62,14 @@
                     <li class="ui-state-default ui-corner-top"><a href="#tabs-2">图片</a></li>
                     <li class="ui-state-default ui-corner-top"><a href="#tabs-3">视频</a></li>
                 </ul>
-                <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+                <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
                     {% placeholder "heritage-image" %}
                     {% placeholder "heritage-text" or %}很抱歉，目前没有相关视频。{% endplaceholder %}
                 </div>
                 <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
                     {% placeholder "heritage-picture" or %}很抱歉，目前没有相关图片。{% endplaceholder %}
                 </div>
-                <div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                <div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
                     <div>
                     {% placeholder "heritage-video" or %}很抱歉，目前没有相关视频。{% endplaceholder %}
                     </div>
