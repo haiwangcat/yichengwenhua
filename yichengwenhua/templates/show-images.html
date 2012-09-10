@@ -1,0 +1,5 @@
+{% for photo in album.public %}
+        <a class="grouped_elements" rel="lightbox[{{ album.title_slug }}]" title="{{photo.caption}}" href="{{photo.image.url}}">
+            <img src="{{ photo.get_thumbnail_crop_url }}" class="thumbnail-box gallerythumb"/>
+        </a>
+{% endfor %}

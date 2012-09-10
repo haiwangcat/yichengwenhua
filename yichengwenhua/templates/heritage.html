@@ -10,11 +10,14 @@
         <link rel="stylesheet" href="{{ STATIC_URL }}libs/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="{{ STATIC_URL }}libs/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
         <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ STATIC_URL }}libs/lightbox/css/lightbox.css" type="text/css" media="screen" />
     {% endaddtoblock %}
 
     {% addtoblock "js" %}
         <script type="text/javascript" src="{{ STATIC_URL }}libs/jquery/js/jquery-ui-1.8.23.custom.min.js"></script>
         <script src="{{ STATIC_URL }}libs/nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}libs/lightbox/js/lightbox.js"></script>
+        
         <script type="text/javascript">
             $(window).load(function() {
                 $('#slider').nivoSlider({pauseTime: 10000});
@@ -23,17 +26,24 @@
         		
 		<script src="{{ STATIC_URL }}libs/Kwicks-1.5.1/js/jquery.kwicks-1.5.1.pack.js" type="text/javascript"></script>
 		<script type="text/javascript">
-            $(function(){
+            $(document).ready(function(){
                 $("#tabs").tabs();
-            })
-            
-			$().ready(function() {
                 
-				$('.kwicks').kwicks({
-					max : 400,
-					spacing : 5
-				});
-			});
+                $(".section-title").each(function() {
+                    try {
+                    $(this).click(function () {
+                        $(this).next().slideToggle("400", "swing");
+                    }); 
+                    }catch(e){}
+                });
+                
+                $('#tabs').bind('tabsselect', function(event, ui) {
+                    var imageArea = $("#image-area");
+                    if (ui.index == 1 && imageArea.children().length == 0)
+                        imageArea.load('get_images');
+                });
+                
+            });
 		</script>
     {% endaddtoblock %}
     
@@ -64,10 +74,12 @@
                 </ul>
                 <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
                     {% placeholder "heritage-image" %}
-                    {% placeholder "heritage-text" or %}很抱歉，目前没有相关视频。{% endplaceholder %}
+                    {% placeholder "heritage-text" %}
                 </div>
                 <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
-                    {% placeholder "heritage-picture" or %}很抱歉，目前没有相关图片。{% endplaceholder %}
+                    
+                    <div id="image-area">很抱歉，目前没有相关图片。</div>
+
                 </div>
                 <div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
                     <div>
@@ -81,18 +93,6 @@
         </div>
             
   
-    <script>window.onload = (function(){
-            
-        $(".section-title").each(function() {
-            try {
-            $(this).click(function () {
-                $(this).next().slideToggle("400", "swing");
-            }); 
-            }catch(e){}
-        });
-
-        });
-    </script>
 
         </div>
     </div>
