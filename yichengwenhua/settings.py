@@ -122,6 +122,7 @@ CMS_TEMPLATES = (
     ('index.html', 'Index Template'),
     ('opening.html', 'Opening Template'),
     ('heritage.html', 'Heritage Template'),
+    ('heritage-index.html', 'Heritage Index Template'),
 )
 
 ROOT_URLCONF = 'yichengwenhua.urls'

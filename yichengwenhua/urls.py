@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.conf import settings
@@ -15,11 +16,11 @@ from django.shortcuts import render_to_response
 def getImages(request, slug):
     if request.is_ajax():
         galleries = Gallery.objects.filter(title_slug = slug)
-        if galleries.count == 0:
-            return HttpResponse('Sorry, there is no photo.')
+        if galleries.count() == 0:
+            return HttpResponse('<p>很抱歉，目前没有相关图片。</p>')
         return render_to_response('show-images.html', {'album': galleries[0]})
     else:
-        return HttpResponse('')
+        return HttpResponse('<p>很抱歉，目前没有相关图片。</p>')
     
     
 urlpatterns = patterns('',

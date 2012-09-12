@@ -34,11 +34,15 @@ def process_heritage_text(instance, placeholder, rendered_content, original_cont
             newDiv.setAttribute('class', 'section-title')
             #newDiv.setAttribute('id', 'section-title' + unicode(counter))
             
+            # Create a new div to show the left border
+            innerDiv = dom.createElement('div')
+            newDiv.appendChild(innerDiv)
+            
             a = dom.createElement('a')
             a.setAttribute('href', 'javascript:;')
             
             a.appendChild(child.cloneNode(True))
-            newDiv.appendChild(a)
+            innerDiv.appendChild(a)
             
             div.replaceChild(newDiv, child)
                         
