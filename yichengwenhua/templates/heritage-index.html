@@ -3,7 +3,7 @@
 {% load heritage_tags %}
 
 {% block heritage-sidebar %}
-<ul class="kwicks" >
+<ul class="kwicks">
     {% for page in request.current_page.children.all %}
     <li id="kwick_{{ forloop.counter }}">
     <a href="{{ page.get_absolute_url }}">
