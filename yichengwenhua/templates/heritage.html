@@ -1,142 +1,24 @@
-{% extends "base.html" %}
+{% extends "heritage-base.html" %}
 {% load cms_tags sekizai_tags menu_tags %}
 
-{% block "title" %}{{ request.current_page.get_title }}{% endblock %}
-
-{% block "content" %}
-
-    {% addtoblock "css" %}
-        <link href="{{ STATIC_URL }}css/index.css" media="screen" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="{{ STATIC_URL }}libs/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="{{ STATIC_URL }}libs/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
-        <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet">
-        <link rel="stylesheet" href="{{ STATIC_URL }}libs/lightbox/css/lightbox.css" type="text/css" media="screen" />
-    {% endaddtoblock %}
-
-    {% addtoblock "js" %}
-        <script type="text/javascript" src="{{ STATIC_URL }}libs/jquery/js/jquery-ui-1.8.23.custom.min.js"></script>
-        <script src="{{ STATIC_URL }}libs/nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
-        <script type="text/javascript" src="{{ STATIC_URL }}libs/lightbox/js/lightbox.js"></script>
-        
-        <script type="text/javascript">
-            $(window).load(function() {
-                $('#slider').nivoSlider({pauseTime: 10000});
-            });
-        </script>
-        		
-		<script src="{{ STATIC_URL }}libs/Kwicks-1.5.1/js/jquery.kwicks-1.5.1.pack.js" type="text/javascript"></script>
-		<script type="text/javascript">
-            $(document).ready(function(){
-                $("#tabs").tabs();
-                
-                $(".section-title").each(function() {
-                    try {
-                    $(this).click(function () {
-                        $(this).next().slideToggle("400", "swing");
-                    }); 
-                    }catch(e){}
-                });
-                
-                $('#tabs').bind('tabsselect', function(event, ui) {
-                    var imageArea = $("#image-area");
-                    if (ui.index == 1 && imageArea.children().length == 0)
-                        imageArea.load('get_images');
-                });
-                
-            });
-		</script>
-        <script>
-            $(function() {
-                $( "#accordion" ).accordion({
-                    event: "mouseover",
-                    icons: null
-                });
-            });
-        </script>
-        
-        <script src="{{ STATIC_URL }}libs/Kwicks-1.5.1/js/jquery.kwicks-1.5.1.pack.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			$().ready(function() {
-				$('.kwicks').kwicks({
-					max : 100,
-					spacing : 5,
-                    isVertical: true,
-                    //sticky: true
-				});
-			});
-		</script>
-    {% endaddtoblock %}
-    
-
-{% comment %}
-    <div class="slider-wrapper theme-default">
-        <div class="ribbon"></div>
-        <div id="slider" class="nivoSlider">
-            {% placeholder "slider" %}
+{% block heritage-sidebar %}
+<ul class="kwicks" >
+    {% for page in request.current_page.get_root.children.all %}
+    <li id="kwick_{{ forloop.counter }}">
+    <a href="{{ page.get_absolute_url }}">
+    <div>
+        <h3>{{ page.get_title }}</h3>
+        <div class="sidebar-title-intro">
+            <p> {% show_placeholder "heritage-intro" page %} </p>
         </div>
-    </div>   
-{% endcomment %}
-    
-    <div class="main-area">
-    
-        <div id="sidebar">
-            
-            <ul class="kwicks" >
-                {% for page in request.current_page.get_root.children.all %}
-                <li id="kwick_{{ forloop.counter }}">
-                <a href="{{ page.get_absolute_url }}">
-                <div>
-                    <h3>{{ page.get_title }}</h3>
-                    <div class="sidebar-title-intro">
-                        <p> {% show_placeholder "heritage-intro" page %} </p>
-                    </div>
-                </div>
-                </a>
-                </li>
-                {% endfor %}
-            </ul>
-                
-            <!--{% show_menu 1 1 0 100 %}-->
-        </div>
-        
-        <div id="content-main">
-            
-            <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
-                <div id="heritage-title">
-                    <h2>{{ request.current_page.get_title }}</h2>
-                    {% placeholder "heritage-intro" %}
-                    <div id="heritage-intro">
-                    </div>
-                </div>
-                <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-                    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1">介绍</a></li>
-                    <li class="ui-state-default ui-corner-top"><a href="#tabs-2">图片</a></li>
-                    <li class="ui-state-default ui-corner-top"><a href="#tabs-3">视频</a></li>
-                </ul>
-                <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
-                    {% placeholder "heritage-image" %}
-                    {% placeholder "heritage-text" %}
-                </div>
-                <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
-                    
-                    <ul id="image-area">正在加载图片...</ul>
+    </div>
+    </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
 
-                </div>
-                <div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
-                    <div id="video-panel">
-                    {% placeholder "heritage-video" or %}很抱歉，目前没有相关视频。{% endplaceholder %}
-                    </div>
-                </div>
-            </div>
-                 
-        </div>
-            
-  
-    </div>
-    
-    <div id="footer">
-    </div>
-    <div id="footer-img">
-    </div>
 
+{% block "heritage-title-img" %}
+    {% placeholder "heritage-image" %}
 {% endblock %}

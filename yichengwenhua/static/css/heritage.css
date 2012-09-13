@@ -1,0 +1,169 @@
+.content-text div>p, .content-text>p, .content-text h4 {
+    margin: 15px 0 15px 0;
+    line-height: 150%;
+}
+
+.content-text {
+    padding-right: 15px;
+}
+
+.section-title+.content-text {
+    display: none;
+}
+
+.section-title h3 {
+    color: white;
+    padding: 10px 0 10px 10px;
+    background-color: #9c181b; /*#c97436;*/
+    font-weight: normal;
+}
+
+.section-title h3:hover {
+    color: yellow;
+}
+
+.section-title {
+    padding: 10px 0 10px 0;
+}
+
+.section-title>div {
+    border-left: 3px solid yellow;
+}
+
+#sidebar {
+    text-align: center;
+    float: left;
+    display: inline;
+    width: 290px;
+    //background-color: #9c181b;
+    margin-right: 18px;
+    padding: 10px;
+    font-size:25px;
+}
+
+#sidebar a {
+    text-decoration:none;
+}
+
+#sidebar a:hover {
+    color:yellow;
+}
+
+#sidebar a {
+    color:white;
+}
+
+#sidebar .selected a {
+    color:yellow;
+}
+
+#sidebar li {
+    width: 100%;
+    height: 50px;
+    position: center;
+    background-color: #9c181b;
+}
+
+#sidebar li:hover {
+    background-color: #9c181b;
+}
+
+#sidebar h3 {
+    height: 50px;
+}
+
+
+#heritage-title {
+    //float: left;
+    position: relative;
+    padding: 10px 0 10px 20px;
+    background-color: #c97436;
+    border-top: 1px solid #9c181b;
+    border-left: 1px solid #9c181b;
+    color: yellow;
+    font-size:25px;
+    font-weight: normal;
+}
+
+#heritage-intro {
+    //float: left;
+}
+
+#heritage-title p {
+    //margin-top: 5px;
+    font-size:17px;
+}
+
+#heritage-title h2 {
+    display: block;
+}
+
+#heritage-title p {
+    position: absolute;
+    bottom: 12px;
+    right: 200px;
+    display: inline;
+}
+
+#content-main {
+    overflow: auto;
+    float: right;
+    display: inline;
+    width: 750px;
+}
+
+#image-area {
+    padding: 20px;
+    text-align: center;
+    /*background-image:url(/static/libs/lightbox/images/loading.gif);
+    background-repeat:no-repeat;*/
+}
+
+#image-area img {
+    background-color: white;
+    padding: 2px;
+    position: relative;
+    display: inline;
+    width: 160px;
+    height: 160px;
+    border: 1px solid #9c181b;
+    z-index: 1;
+}
+
+#image-area img:hover {
+    padding: 0;
+    display: inline;
+    border: 2px solid yellow;
+    width: 200px;
+    height: 200px;
+    margin: -19px;
+    z-index: 100;
+}
+
+#video-panel {
+    text-align: center;
+    padding: 0.00;
+    margin: 20px auto 0;
+    width: 480px;
+}
+
+/* for kwicks add-on */
+
+.kwicks {
+	/* recommended styles for kwicks ul container */
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.kwicks li{
+	/* these are required, but the values are up to you (must be pixel) */
+	width: 200px;
+	height: 400px;
+
+	/*do not change these */
+	display: block;
+	overflow: hidden;
+	padding: 0;  /* if you need padding, do so with an inner div (or implement your own box-model hack) */
+}
+

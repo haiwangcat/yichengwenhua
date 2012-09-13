@@ -12,3 +12,8 @@ def getTopPos(size, index):
 def getLeftPos(size, index):
     print dir(size)
     return index % 4 * size[0]
+    
+@register.simple_tag
+def showClassInfo(obj):
+    print obj.placeholders.all()
+    print obj.__class__.__name__
