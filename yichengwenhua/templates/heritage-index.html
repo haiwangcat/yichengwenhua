@@ -18,11 +18,11 @@
 </ul>
 {% endblock %}
 
-{% block "heritage-title-img" %}
+
+{% block "heritage-main-content" %}
 
     {% addtoblock "css" %}
         <link rel="stylesheet" href="{{ STATIC_URL }}libs/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="{{ STATIC_URL }}libs/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
     {% endaddtoblock %}
     
     {% addtoblock "js" %}
@@ -33,6 +33,14 @@
             });
         </script>
     {% endaddtoblock %}
+    
+    <div id="heritage-title">
+        <h2>{{ request.current_page.get_title }}</h2>
+        {% placeholder "heritage-intro" %}
+        <div id="heritage-intro">
+        </div>
+    </div>
+    
         
     <div class="slider-wrapper theme-default">
         <div class="ribbon"></div>
@@ -41,5 +49,8 @@
             {% show_placeholder "heritage-image" page %}
         {% endfor %}
         </div>
-    </div> 
+    </div>
+    
+    {% placeholder "heritage-text" %}
+    
 {% endblock %}

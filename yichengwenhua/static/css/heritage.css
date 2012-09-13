@@ -72,6 +72,11 @@
     height: 50px;
 }
 
+div.sidebar-title {
+    height: 50px;
+    line-height: 50px;
+}
+
 
 #heritage-title {
     //float: left;

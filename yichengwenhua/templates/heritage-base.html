@@ -6,7 +6,6 @@
 {% block "content" %}
 
     {% addtoblock "css" %}
-        <link href="{{ STATIC_URL }}css/common.css" media="screen" rel="stylesheet" type="text/css" />
         <link href="{{ STATIC_URL }}css/heritage.css" media="screen" rel="stylesheet" type="text/css" />
         <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ STATIC_URL }}libs/lightbox/css/lightbox.css" type="text/css" media="screen" />
@@ -96,6 +95,8 @@
         </div>
         
         <div id="content-main">
+        
+            {% block "heritage-main-content" %}
             
             <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
                 <div id="heritage-title">
@@ -110,11 +111,7 @@
                     <li class="ui-state-default ui-corner-top"><a href="#tabs-3">视频</a></li>
                 </ul>
                 <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
-                
-                    {% block "heritage-title-img" %}
-                        {% placeholder "heritage-image" %}
-                    {% endblock %}
-                    
+                    {% placeholder "heritage-image" %}
                     {% placeholder "heritage-text" %}
                 </div>
                 <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
@@ -128,6 +125,8 @@
                     </div>
                 </div>
             </div>
+            
+            {% endblock %}
                  
         </div>
             
@@ -135,9 +134,6 @@
     </div>
     
     <div id="footer">
-    </div>
-    
-    <div id="footer-img">
     </div>
 
 {% endblock %}
