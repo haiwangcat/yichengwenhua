@@ -16,6 +16,9 @@
     padding: 10px 0 10px 10px;
     background-color: #9c181b; /*#c97436;*/
     font-weight: normal;
+    background-image:url(/static/img/frame2.png);
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 .section-title h3:hover {
