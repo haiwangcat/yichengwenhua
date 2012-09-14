@@ -1,5 +1,6 @@
 /* colors:
 red: #9c181b
+dark red: #831114
 
 
 yellow: from dark to shallow
@@ -69,7 +70,7 @@ body a {
     width: 1080px;
     z-index: 1;
     background-color: #b35f25;
-    border: 1px solid yellow;
+    border: 1px solid orange;
 }
 
 #header {
@@ -288,7 +289,7 @@ ul.dropdown li:hover > ul {
 }
 
 .main-area table, .main-area table td {
-    border: 1px solid black;
+    border: 1px solid;
     border-collapse: collapse;
 }
 

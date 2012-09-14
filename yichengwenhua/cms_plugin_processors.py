@@ -66,3 +66,17 @@ def process_heritage_text(instance, placeholder, rendered_content, original_cont
     #print output
     return output
     
+    
+    
+def process_heritage_video(instance, placeholder, rendered_content, original_context):
+    '''
+    Process the videos on culture heritage page.
+    '''
+    if placeholder.slot != 'heritage-text' or (instance._render_meta.text_enabled and instance.parent):
+        return rendered_content
+        
+    
+    import xml.etree.ElementTree as ET
+    import xml.dom.minidom
+
+    

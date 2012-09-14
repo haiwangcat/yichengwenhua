@@ -82,7 +82,7 @@ div.sidebar-title {
     //float: left;
     position: relative;
     padding: 10px 0 10px 20px;
-    background-color: #c97436;
+    background-color: #9c181b;
     border-top: 1px solid #9c181b;
     border-left: 1px solid #9c181b;
     color: yellow;
@@ -147,9 +147,26 @@ div.sidebar-title {
 
 #video-panel {
     text-align: center;
-    padding: 0.00;
-    margin: 20px auto 0;
-    width: 480px;
+    padding: 20px 0;
+    //margin: 20px auto 0;
+    //width: 480px;
+}
+
+#video-left-panel { float: left; width: 480px; }
+
+#video-list { padding: 10px; float: right; width: 220px; min-height: 450px; background-color: #9c181b; margin-right: 10px; text-align: center; }
+#video-list span { display: table; height: 50px; width: 100%; }
+#video-list span:first-of-type { height: 30px; border-bottom: 1px solid yellow; margin-bottom: 10px; }
+#video-list span a { display: table-cell; vertical-align: middle; }
+#video-list span a.video-selected, #video-list span a:hover { color: yellow; outline: 1px solid yellow; }
+
+#video-window {
+    background-image: url(/static/img/film.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 400px;
+    margin: 30px 0;
 }
 
 /* for kwicks add-on */

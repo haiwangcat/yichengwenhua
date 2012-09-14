@@ -7,7 +7,7 @@
     <li id="kwick_{{ forloop.counter }}">
     <a href="{{ page.get_absolute_url }}">
     <div>
-        <h3>{{ page.get_title }}</h3>
+        <div class="sidebar-title"> {{ page.get_title }} </div>
         <div class="sidebar-title-intro">
             <p> {% show_placeholder "heritage-intro" page %} </p>
         </div>

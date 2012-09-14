@@ -56,6 +56,23 @@
                     isVertical: true,
                     //sticky: true
 				});
+                
+                // Process the links to videos
+                $('#video-panel a').each(function() {
+                    try {
+                    var ref = $(this).attr("href");
+                    $(this).click(function () {
+                        $('#video-window').html('<embed src="' + ref + '" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>');
+                        $('#video-panel a').removeClass("video-selected");
+                        $(this).addClass("video-selected");
+                        $("#video-left-panel p").html("视频："+$(this).html());
+                    }); 
+                    $(this).attr("href", "javascript:;");
+                    }catch(e){}
+                });
+                
+                if ($('#video-panel a').length == 0)
+                    $("#video-panel").html("<p>很抱歉，目前没有相关视频。</p>");
 			});
 		</script>
     {% endaddtoblock %}
@@ -121,7 +138,14 @@
                 </div>
                 <div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
                     <div id="video-panel">
-                    {% placeholder "heritage-video" or %}很抱歉，目前没有相关视频。{% endplaceholder %}
+                        <div id="video-list">
+                            <span>视频列表</span>
+                        {% placeholder "heritage-video" or %}{% endplaceholder %}
+                        </div>
+                        <div id="video-left-panel">
+                            <p>请从右侧列表中选择视频</p>
+                            <div id="video-window"></div>
+                        </div>
                     </div>
                 </div>
             </div>
