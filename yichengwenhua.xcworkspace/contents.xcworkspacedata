@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:yichengwenhua/settings.py">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/urls.py">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/cms_plugin_processors.py">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templatetags/heritage_tags.py">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templates/base.html">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templates/opening.html">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templates/index.html">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templates/heritage-base.html">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templates/heritage.html">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templates/heritage-index.html">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templates/menu/menu.html">
+   </FileRef>
+   <FileRef
+      location = "group:yichengwenhua/templates/show-images.html">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "js">
+      <FileRef
+         location = "group:yichengwenhua/static/libs/lightbox/js/lightbox.js">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "css">
+      <FileRef
+         location = "group:yichengwenhua/static/css/common.css">
+      </FileRef>
+      <FileRef
+         location = "group:yichengwenhua/static/css/opening.css">
+      </FileRef>
+      <FileRef
+         location = "group:yichengwenhua/static/css/heritage.css">
+      </FileRef>
+      <FileRef
+         location = "group:yichengwenhua/static/css/index.css">
+      </FileRef>
+      <FileRef
+         location = "group:yichengwenhua/static/css/jquery-ui.css">
+      </FileRef>
+      <FileRef
+         location = "group:yichengwenhua/static/libs/lightbox/css/lightbox.css">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "local">
+      <FileRef
+         location = "group:local/settings.py">
+      </FileRef>
+      <FileRef
+         location = "group:local/urls.py">
+      </FileRef>
+   </Group>
+</Workspace>
