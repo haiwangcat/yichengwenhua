@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load cms_tags sekizai_tags menu_tags %}
+{% load cms_tags sekizai_tags menu_tags heritage_tags %}
 
 {% block "title" %}{{ request.current_page.get_title }}{% endblock %}
 
@@ -92,17 +92,18 @@
         <div id="sidebar">
             
             {% block heritage-sidebar %}
-            <ul class="kwicks" >
+            <ul class="kwicks">
                 {% for page in request.current_page.get_root.children.all %}
                 <li id="kwick_{{ forloop.counter }}">
-                <a href="{{ page.get_absolute_url }}">
-                <div>
-                    <h3>{{ page.get_title }}</h3>
-                    <div class="sidebar-title-intro">
-                        <p> {% show_placeholder "heritage-intro" page %} </p>
-                    </div>
-                </div>
-                </a>
+                    <a href="{{ page.get_absolute_url }}">
+                        <div>
+                            <div class="sidebar-title" style="background-image:url(/static/img/ycwh/heritage-titles.png); background-position:0px {% mul forloop.counter0 50%}px">
+                            </div>
+                            <div class="sidebar-title-intro">
+                                <p> {% show_placeholder "heritage-intro" page %} </p>
+                            </div>
+                        </div>
+                    </a>
                 </li>
                 {% endfor %}
             </ul>

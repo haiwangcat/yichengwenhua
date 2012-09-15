@@ -17,3 +17,7 @@ def getLeftPos(size, index):
 def showClassInfo(obj):
     print obj.placeholders.all()
     print obj.__class__.__name__
+
+@register.simple_tag
+def mul(a, b):
+    return a * b
