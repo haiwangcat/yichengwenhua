@@ -19,13 +19,13 @@
 div.sidebar-title-wrapper { padding: 9px 0; height: 50px; border: 1px solid yellow; }
 div.sidebar-title { height: 100%; }
 
-#heritage-title { position: relative; padding: 10px 0 10px 20px; background-color: #9c181b; border-top: 1px solid #9c181b; border-left: 1px solid #9c181b; color: yellow; font-size:25px; font-weight: normal; }
+#heritage-title { position: relative; padding: 10px 0 10px 20px; background-color: #9c181b; border-top: 1px solid #9c181b; border-left: 1px solid #9c181b; color: yellow; font-size:40px; font-weight: normal; }
 
 #heritage-intro { }
  
 #heritage-title p { font-size:17px; }
 #heritage-title h2 { display: block; }
-#heritage-title p { position: absolute; bottom: 12px; right: 200px; display: inline; }
+#heritage-title p { position: absolute; bottom: 15px; left: 200px; display: inline; }
 
 #content-main { overflow: auto; float: right; display: inline; width: 750px; }
 

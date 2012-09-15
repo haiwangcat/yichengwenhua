@@ -1,38 +1,38 @@
 /* colors:
-red: #9c181b
-dark red: #831114
+red:#9c181b
+dark red:#831114
 
-yellow: from dark to shallow
+yellow:from dark to shallow
 
 #c97436
 #f0b773
 #f3c58d
 */
 
-* { margin: 0; padding: 0; }
+* { margin:0; padding:0; }
 
-html { min-width: 1080px; }
+html { min-width:1080px; }
 
-html,body,p,div,img,h1,h2,h3,h4,li,ul,ol,dl,dd,dt,form,table,td,tr { margin:0px; padding:0px; border:0px; border-collapse:separate; border-spacing:0px; font-family: "微软雅黑","Lucida Grande",Helvetica,Arial,Verdana,sans-serif; }
+html,body,p,div,img,h1,h2,h3,h4,li,ul,ol,dl,dd,dt,form,table,td,tr { margin:0px; padding:0px; border:0px; border-collapse:separate; border-spacing:0px; font-family:"微软雅黑","Lucida Grande",Helvetica,Arial,Verdana,sans-serif; }
 
 input,select { margin:0; padding:0; }
 
-div { display: block; }
+div { display:block; }
 
-ul, li { list-style: none; }
+ul, li { list-style:none; }
 
-body { margin-bottom: 30px; position:relative; z-index:1; background-color: #831114; background-image:url(/static/img/ycwh/bg-2.jpg), url(/static/img/ycwh/footer.jpg); background-position:top, bottom; background-repeat:no-repeat; /*background:#86C9EF; F5E7D3 //border:1px solid #d9d9d9; //border-top:none; //border-bottom:none; //-webkit-box-shadow:0 0 4px rgba(0,0,0,.3); //-moz-box-shadow:0 0 4px rgba(0,0,0,.3); //box-shadow:0 0 4px rgba(0,0,0,.3);*/ }
+body { margin-bottom:30px; position:relative; z-index:1; background-color:#831114; background-image:url(/static/img/ycwh/bg-2.jpg), url(/static/img/ycwh/footer.jpg); background-position:top, bottom; background-repeat:no-repeat; /*background:#86C9EF; F5E7D3 //border:1px solid #d9d9d9; //border-top:none; //border-bottom:none; //-webkit-box-shadow:0 0 4px rgba(0,0,0,.3); //-moz-box-shadow:0 0 4px rgba(0,0,0,.3); //box-shadow:0 0 4px rgba(0,0,0,.3);*/ }
 
 body a { text-decoration:none; }
 
-#main-panel { color: white; margin:0 auto 200px; position: relative; width: 1080px; z-index: 1; background-color: #b35f25; border: 1px solid orange; }
+#main-panel { color:white; margin:0 auto 200px; position:relative; width:1080px; z-index:1; background-color:#b35f25; border:1px solid orange; }
 
-#header { width:1080px; display:block; height:250px; margin:auto; padding: 10px 0 0 0; }
+#header { width:1080px; display:block; height:250px; margin:auto; padding:10px 0 0 0; }
 
 #footer { display:block; width:1080px; height:200px; background-color:#c97436; }
 #footer-img { display:block; width:1080px; height:200px; margin:auto; background-image:url(/static/img/ycwh/footer.jpg); background-position:bottom; background-repeat:no-repeat; }
 
-#menu { display:block; height:30px; padding-top:5px; padding-bottom:5px; background-color:#9c181b; background-position:center; background-repeat:no-repeat; font-size:17px; }
+#menu { display:block; height:40px; line-height:40px; background-color:#9c181b; background-position:center; background-repeat:no-repeat; font-size:17px; }
 #menu ul { margin:0; }
 #menu .menuitem{ width:90px; }
 #menu a, #nav a { text-decoration:none; }
@@ -46,39 +46,39 @@ body a { text-decoration:none; }
 
 /* LEVEL ONE */
 
-ul.dropdown { position: relative; }
-ul.dropdown li { font-weight: normal; float: left; zoom: 1; background: #9c181b; text-align: center; }
-ul.dropdown a:hover { color: #000; }
-ul.dropdown a:active { color: yellow; }
-ul.dropdown li a { display: block; padding: 4px 0 4px 0; color: #222; }
-ul.dropdown li:last-child a { border-right: none; }
+ul.dropdown { position:relative; }
+ul.dropdown li { font-weight:normal; float:left; zoom:1; background:#9c181b; text-align:center; }
+ul.dropdown a:hover { color:#000; }
+ul.dropdown a:active { color:yellow; }
+ul.dropdown li a { display:block; color:#222; }
+ul.dropdown li:last-child a { border-right:none; }
 /* Doesn't work in IE */
-ul.dropdown li.hover, ul.dropdown li:hover { /*background: #F3D673;*/ color: black; position: relative; }
-ul.dropdown li.hover a { color: black; }
+ul.dropdown li.hover, ul.dropdown li:hover { /*background:#F3D673;*/ color:black; position:relative; }
+ul.dropdown li.hover a { color:black; }
 
 /* LEVEL TWO */
-ul.dropdown ul { width: 220px; visibility: hidden; z-index:2; position: absolute; top: 100%; left: 0; }
-ul.dropdown ul li { font-weight: normal; background: #9c181b; color: #000; border-top: 1px solid #ccc; float: none; }              
+ul.dropdown ul { width:220px; visibility:hidden; z-index:2; position:absolute; top:100%; left:0; }
+ul.dropdown ul li { font-weight:normal; background:#9c181b; color:#000; border-top:1px solid #ccc; float:none; }              
 /* IE 6 & 7 Needs Inline Block */
-ul.dropdown ul li a { border-right: none; width: 100%; display: inline-block; }
+ul.dropdown ul li a { border-right:none; width:100%; display:inline-block; }
 
 /* LEVEL THREE */
-ul.dropdown ul ul { left: 100%; top: 0; }
-ul.dropdown li:hover > ul { visibility: visible; }
+ul.dropdown ul ul { left:100%; top:0; }
+ul.dropdown li:hover > ul { visibility:visible; }
 
 /*
-.submenu { position:relative; //visibility:hidden; padding: 10px 0 0 0; background-color: #2A170D; z-index:2; border-bottom-left-radius:4px; border-bottom-right-radius:4px; } 
+.submenu { position:relative; //visibility:hidden; padding:10px 0 0 0; background-color:#2A170D; z-index:2; border-bottom-left-radius:4px; border-bottom-right-radius:4px; } 
 
-.submenu ul { list-style-type: none; padding: 0; border: 0; }
-.submenu li { display:list-item; padding: 0 0 10px 0; }*/
+.submenu ul { list-style-type:none; padding:0; border:0; }
+.submenu li { display:list-item; padding:0 0 10px 0; }*/
 
-#nav { position:relative; display:block; height:20px; text-align:center; background-color:#c97436; color:white; z-index:1; font-size:17px; padding:10px 10px 10px 10px; }
-#nav li { display:table-cell; overflow:hidden; }
+#nav { position:relative; display:block; height:40px; line-height:40px; text-align:center; background-color:#c97436; color:white; z-index:1; font-size:17px; padding:0 10px; }
+#nav li { display:table-cell; overflow:hidden; padding-left:10px; }
 
-.main-area { overflow: auto; width: 1078px; padding-bottom: 20px; }
-.main-area a { color: white; }
-.main-area a:hover h3 { color: yellow; }
-.main-area table { text-align: center; }
-.main-area table td { padding: 10px; }
-.main-area table, .main-area table td { border: 1px solid; border-collapse: collapse; }
+.main-area { overflow:auto; width:1078px; padding-bottom:20px; }
+.main-area a { color:white; }
+.main-area a:hover h3 { color:yellow; }
+.main-area table { text-align:center; }
+.main-area table td { padding:10px; }
+.main-area table, .main-area table td { border:1px solid; border-collapse:collapse; }
 

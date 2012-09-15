@@ -51,7 +51,7 @@
 		<script type="text/javascript">
 			$().ready(function() {
 				$('.kwicks').kwicks({
-					max : 120,
+					max : 200,
 					spacing : 2,
                     isVertical: true,
                     //sticky: true
@@ -120,7 +120,7 @@
             
             <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
                 <div id="heritage-title">
-                    <h2>{{ request.current_page.get_title }}</h2>
+                    {{ request.current_page.get_title }}
                     {% placeholder "heritage-intro" %}
                     <div id="heritage-intro">
                     </div>
