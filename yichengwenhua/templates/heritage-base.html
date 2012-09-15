@@ -51,8 +51,8 @@
 		<script type="text/javascript">
 			$().ready(function() {
 				$('.kwicks').kwicks({
-					max : 100,
-					spacing : 5,
+					max : 120,
+					spacing : 2,
                     isVertical: true,
                     //sticky: true
 				});
@@ -97,7 +97,9 @@
                 <li id="kwick_{{ forloop.counter }}">
                     <a href="{{ page.get_absolute_url }}">
                         <div>
+                            <div class="sidebar-title-wrapper">
                             <div class="sidebar-title" style="background-image:url(/static/img/ycwh/heritage-titles.png); background-position:0px -{% mul forloop.counter0 50%}px">
+                            </div>
                             </div>
                             <div class="sidebar-title-intro">
                                 <p> {% show_placeholder "heritage-intro" page %} </p>
