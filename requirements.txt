@@ -3,3 +3,4 @@ PIL
 django-photologue
 South
 django-cms
+django-tagging
