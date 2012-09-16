@@ -50,7 +50,7 @@ lightbox = new Lightbox options
     function LightboxOptions() {
       this.fileLoadingImage = '/static/libs/lightbox/images/loading.gif';
       this.fileCloseImage = '/static/libs/lightbox/images/close.png';
-      this.resizeDuration = 300;
+      this.resizeDuration = 200;
       this.fadeDuration = 200;
       this.labelImage = "图片";
       this.labelOf = "/";
