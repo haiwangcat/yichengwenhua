@@ -1,5 +1,5 @@
 .content-text div>p, .content-text>p, .content-text h4 { margin:15px 0 15px 0; line-height:150%; }
-.content-text { padding-right:15px; }
+.content-text { padding-right:10px; }
 
 .section-title+.content-text { display:none; }
 .section-title h3 { color:white; padding:10px 0 10px 10px; background-color:#9c181b; /*#c97436;*/ font-weight:normal; background-image:url(/static/img/frame2.png); background-position:right; background-repeat:no-repeat; }

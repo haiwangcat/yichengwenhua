@@ -1,0 +1,19 @@
+{% extends "heritage-base.html" %}
+{% load cms_tags sekizai_tags menu_tags %}
+
+
+{% block "heritage-main-content" %}
+    <div id="heritage-title">
+        {{ request.current_page.get_title }}
+        {% placeholder "heritage-intro" %}
+        <div id="heritage-intro">
+        </div>
+    </div>
+    
+    {% placeholder "heritage-text" %}
+    
+    {% for page in request.current_page.children.all %}
+    <p class="heritage-link"><a href="{{ page.get_absolute_url }}"> {{ page.get_title }} </a></p>
+    {% endfor %}
+    
+{% endblock %}
