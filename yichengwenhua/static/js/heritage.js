@@ -46,12 +46,14 @@ $('#tabs').bind('tabsselect', function(event, ui) {
         });
 });
 
+/*
 $('.kwicks').kwicks({
     max : 200,
     spacing : 2,
     isVertical: true,
     //sticky: true
 });
+*/
     
 // Process the links to videos
 $('#video-panel a').each(function() {

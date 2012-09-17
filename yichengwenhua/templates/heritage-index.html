@@ -36,4 +36,8 @@
     
     {% placeholder "heritage-text" %}
     
+    {% for page in request.current_page.children.all %}
+    <p class="heritage-link"><a href="{{ page.get_absolute_url }}"> {{ page.get_title }} </a></p>
+    {% endfor %}
+    
 {% endblock %}
