@@ -183,5 +183,6 @@ LOGGING = {
 
 CMS_PLUGIN_PROCESSORS = (
     'yichengwenhua.cms_plugin_processors.process_heritage_text',
+    'yichengwenhua.cms_plugin_processors.process_heritage_video',
 )
 

@@ -70,13 +70,33 @@ def process_heritage_text(instance, placeholder, rendered_content, original_cont
     
 def process_heritage_video(instance, placeholder, rendered_content, original_context):
     '''
-    Process the videos on culture heritage page.
+    Process the videos on culture heritage page to add auto-play.
     '''
-    if placeholder.slot != 'heritage-text' or (instance._render_meta.text_enabled and instance.parent):
+    if placeholder.slot != 'heritage-video':
         return rendered_content
         
     
     import xml.etree.ElementTree as ET
     import xml.dom.minidom
+    
+    begin = unicode("<foo>")
+    end = unicode("</foo>")
+    
+    str = begin + unicode(rendered_content) + end
+    dom = xml.dom.minidom.parseString(str.encode('utf-8'))
+
+    for child in dom.childNodes[0].childNodes:
+        a = child.childNodes[0]
+        href = a.getAttribute('href')
+        if href.find('tudou.com') >= 0:
+            href = href.replace('/v.swf', '&autoPlay=true/v.swf')
+        elif href.find('player.youku.com') >= 0:
+            id = href.split('/')[-2]
+            href = 'http://static.youku.com/v/swf/qplayer.swf?VideoIDS=' + id + '=&isAutoPlay=true&isShowRelatedVideo=false&embedid=-&showAd=0'
+        href = a.setAttribute('href', href)
+                
+    output = dom.toxml()
+    output = output.split(begin)[-1].split(end)[0]
+    return output
 
     
