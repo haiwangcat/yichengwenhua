@@ -21,7 +21,8 @@ div { display:block; }
 
 ul, li { list-style:none; }
 
-body { margin-bottom:30px; position:relative; z-index:1; background-color:#831114; background-image:url(/static/img/ycwh/bg-2.jpg), url(/static/img/ycwh/footer.jpg); background-position:top, bottom; background-repeat:no-repeat; /*background:#86C9EF; F5E7D3 //border:1px solid #d9d9d9; //border-top:none; //border-bottom:none; //-webkit-box-shadow:0 0 4px rgba(0,0,0,.3); //-moz-box-shadow:0 0 4px rgba(0,0,0,.3); //box-shadow:0 0 4px rgba(0,0,0,.3);*/ }
+body { margin-bottom:30px; position:relative; z-index:1; background-color:#831114;
+background-image:url(/static/img/ycwh/bg-2.jpg); background-position:top; background-repeat:no-repeat; /*background-image:url(/static/img/ycwh/bg-2.jpg), url(/static/img/ycwh/footer.jpg); background-position:top, bottom; background-repeat:no-repeat; background:#86C9EF; F5E7D3 //border:1px solid #d9d9d9; //border-top:none; //border-bottom:none; //-webkit-box-shadow:0 0 4px rgba(0,0,0,.3); //-moz-box-shadow:0 0 4px rgba(0,0,0,.3); //box-shadow:0 0 4px rgba(0,0,0,.3);*/ }
 
 body a { text-decoration:none; }
 
