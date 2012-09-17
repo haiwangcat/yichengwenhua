@@ -12,12 +12,12 @@
 #sidebar a:hover { color:yellow; }
 #sidebar a { color:white; }
 #sidebar .selected a { color:yellow; }
-#sidebar li { width:100%; height:70px; background-color:#9c181b; background-image:url(/static/img/ycwh/heritage-title-frame-l.png), url(/static/img/ycwh/heritage-title-frame.png); background-position:left top, right top; background-repeat:no-repeat; }
+#sidebar li { width:100%; height:60px; background-color:#9c181b; background-image:url(/static/img/ycwh/heritage-title-frame-l60.png), url(/static/img/ycwh/heritage-title-frame60.png); background-position:left top, right top; background-repeat:no-repeat; }
 #sidebar li:hover { background-color:#9c181b; }
-#sidebar h3 { height:50px; }
+#sidebar h3 { height:40px; }
 
-div.sidebar-title-wrapper { padding:9px 0; height:50px; border:1px solid yellow; }
-div.sidebar-title { height:100%; }
+div.sidebar-title-wrapper { padding:9px 0; height:40px; border:1px solid yellow; }
+div.sidebar-title { width:240px; height:40px; margin: 0 auto; }
 
 #heritage-title { position:relative; padding:10px 0 10px 20px; background-color:#9c181b; border-top:1px solid #9c181b; border-left:1px solid #9c181b; color:yellow; font-size:40px; font-weight:normal; }
 
