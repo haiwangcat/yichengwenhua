@@ -43,3 +43,15 @@ def hasVideos(page):
             if ph.get_plugins().count() == 0:
                 return False
     return True
+    
+@register.filter
+def isNationalHeritage(page):
+    slug = page.get_slug()
+    if slug == "huagu" or slug == "yichengqinshu":
+        return True
+    return False
+        
+        
+        
+        
+         

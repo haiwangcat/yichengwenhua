@@ -14,7 +14,7 @@
     {% addtoblock "js" %}
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}libs/lightbox/js/lightbox.js"></script>
-    <script src="{{ STATIC_URL }}libs/Kwicks-1.5.1/js/jquery.kwicks-1.5.1.pack.js" type="text/javascript"></script>
+    <!--script src="{{ STATIC_URL }}libs/Kwicks-1.5.1/js/jquery.kwicks-1.5.1.pack.js" type="text/javascript"></script-->
     <script src="{{ STATIC_URL }}js/heritage.js" type="text/javascript"></script>
     {% endaddtoblock %}
     
@@ -66,6 +66,9 @@
                 <div id="heritage-title">
                     {{ request.current_page.get_title }}
                     {% placeholder "heritage-intro" %}
+                    {% if request.current_page|isNationalHeritage %}
+                        <img src="/static/img/logo/China_Intangible_Cultural_Heritage_Logo.png" title="国家级非物质文化遗产">
+                    {% endif %}
                     <div id="heritage-intro">
                     </div>
                 </div>
