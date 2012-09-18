@@ -54,6 +54,26 @@ $('.kwicks').kwicks({
     //sticky: true
 });
 */
+
+// Add a link used to unfold all sections.
+var newLink = $('<a href="javascript:;">展开所有条目</a>')
+$('.section-title:first').before(newLink);
+newLink.css({"display": "block", "padding-bottom": "5px", "color": "yellow"});
+newLink.click(function(){
+    if ($(this).html() == "展开所有条目") {
+        $(this).html("收起所有条目");
+        $(".section-title").each(function() {
+            $(this).next().show();
+        }); 
+    }
+    else {
+        $(this).html("展开所有条目");
+        $(".section-title").each(function() {
+            $(this).next().hide();
+        });
+    }
+});
+
     
 // Process the links to videos
 $('#video-panel a').each(function() {

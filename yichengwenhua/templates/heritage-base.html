@@ -71,8 +71,12 @@
                 </div>
                 <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
                     <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1">介绍</a></li>
+                    {% if request.current_page|hasImages %}
                     <li class="ui-state-default ui-corner-top"><a href="#tabs-2">图片</a></li>
+                    {% endif %}
+                    {% if request.current_page|hasVideos %}
                     <li class="ui-state-default ui-corner-top"><a href="#tabs-3">视频</a></li>
+                    {% endif %}
                 </ul>
                 <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
                     {% placeholder "heritage-image" %}
