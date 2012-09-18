@@ -32,6 +32,9 @@
       location = "group:yichengwenhua/templates/heritage-index.html">
    </FileRef>
    <FileRef
+      location = "group:yichengwenhua/templates/heritage-other.html">
+   </FileRef>
+   <FileRef
       location = "group:yichengwenhua/templates/menu/menu.html">
    </FileRef>
    <FileRef
@@ -40,6 +43,9 @@
    <Group
       location = "container:"
       name = "js">
+      <FileRef
+         location = "group:yichengwenhua/static/js/heritage.js">
+      </FileRef>
       <FileRef
          location = "group:yichengwenhua/static/libs/lightbox/js/lightbox.js">
       </FileRef>

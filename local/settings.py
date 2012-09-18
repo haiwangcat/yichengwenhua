@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'photologue', 
     'yichengwenhua',
+    'tagging',
     #'gallery.mygallery',
     #'gallery.master_gallery',
     'cms',
@@ -174,6 +175,7 @@ LOGGING = {
 
 CMS_PLUGIN_PROCESSORS = (
     'yichengwenhua.cms_plugin_processors.process_heritage_text',
+    'yichengwenhua.cms_plugin_processors.process_heritage_video',
 )
 
 CMS_PLACEHOLDER_CONF = {
