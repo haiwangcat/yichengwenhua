@@ -1,4 +1,4 @@
-# Django settings for gallery project.
+# -*- coding: utf-8 -*-
 
 import os
 
@@ -110,10 +110,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 CMS_TEMPLATES = (
-    ('index.html', 'Index Template'),
-    ('opening.html', 'Opening Template'),
-    ('heritage.html', 'Heritage Template'),
-    ('heritage-index.html', 'Heritage Index Template'),
+    ('index.html', gettext(u'网站首页模板')),
+    ('opening.html', gettext(u'进站模板')),
+    ('heritage.html', gettext(u'文化遗产模板')),
+    ('heritage-index.html', gettext(u'文化遗产首页模板')),
 )
 
 ROOT_URLCONF = 'urls'
@@ -176,4 +176,22 @@ CMS_PLUGIN_PROCESSORS = (
     'yichengwenhua.cms_plugin_processors.process_heritage_text',
 )
 
+CMS_PLACEHOLDER_CONF = {
+    'heritage-intro': {
+        'plugins': ['TextPlugin'],
+        'name':gettext(u"文化遗产简介"),
+    },
+    'heritage-image': {
+        'plugins': ['PicturePlugin'],
+        'name':gettext(u"文化遗产标题图片"),
+    },
+    'heritage-text': {
+        'plugins': ['TextPlugin'],
+        'name':gettext(u"文化遗产文字内容"),
+    },
+    'heritage-video': {
+        'plugins': ['LinkPlugin'],
+        'name':gettext(u"文化遗产视频链接"),
+    },
+}
 
