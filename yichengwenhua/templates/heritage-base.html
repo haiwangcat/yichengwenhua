@@ -37,8 +37,10 @@
                 {% for page in request.current_page.get_root.children.all %}
                 <li id="kwick_{{ forloop.counter }}">
                     <a href="{{ page.get_absolute_url }}">
-                        <div class="sidebar-title-wrapper">
+                        <div class="sidebar-title-wrapper1">
+                        <div class="sidebar-title-wrapper2">
                         <div class="sidebar-title" style="background-image:url(/static/img/ycwh/heritage-titles.png); background-position:0px -{% mul forloop.counter0 40 %}px">
+                        </div>
                         </div>
                         </div>
                         
