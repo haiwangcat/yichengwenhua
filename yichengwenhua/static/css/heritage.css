@@ -59,7 +59,7 @@ div.sidebar-title { width:240px; height:40px; margin: 0 auto; }
 #video-panel { text-align:center; padding:20px 0; }
 #video-left-panel { float:left; width:480px; }
 
-#video-list { padding:10px; float:right; width:220px; min-height:450px; background-color:#9c181b; margin-right:10px; text-align:center; }
+#video-list { padding:10px; float:right; width:220px; height:450px; background-color:#9c181b; margin-right:10px; text-align:center; }
 #video-list span { display:table; height:50px; width:100%; }
 #video-list span:first-of-type { height:30px; border-bottom:1px solid yellow; margin-bottom:10px; }
 #video-list span a { display:table-cell; vertical-align:middle; }
