@@ -8,7 +8,7 @@
     
 {% for child in children %}
 <li class="{% if child.selected %}selected{% endif %}{% if child.ancestor %}ancestor{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %} menuitem">
-	<a id="menuitem{{ forloop.counter }}" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>    
+	<a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>    
 	
     {% if child.children and child.menu_level < 1 %}
         <ul class="submenu">

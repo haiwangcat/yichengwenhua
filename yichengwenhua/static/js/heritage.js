@@ -47,7 +47,7 @@ $('#tabs').bind('tabsselect', function(event, ui) {
 });
 
 
-$("#heritage-title img").hover(function(){ $(this).animate({width: 180, height: 180}, 200, function(){}); }, function(){ $(this).animate({width: 85, height: 85}, 200, function(){}); });
+$("#heritage-title img").hover(function(){ $(this).animate({width: 180, height: 180}, 200, 'linear', function(){}); }, function(){ $(this).animate({width: 85, height: 85}, 200, function(){}); });
               
 /*
 $('.kwicks').kwicks({
