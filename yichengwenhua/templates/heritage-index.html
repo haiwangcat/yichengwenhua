@@ -11,17 +11,21 @@
     {% addtoblock "js" %}
         <script src="{{ STATIC_URL }}libs/jcobb-basic-jquery-slider/js/basic-jquery-slider.min.js" type="text/javascript"></script>
         <script type="text/javascript">
-        $(document).ready(function(){
-                $('#slider').bjqs({
-                    'width' : 750,
-                    'height' : 270,
-                    'animationDuration': 1500,
-                    'animation': 'slide',
-                    'showMarkers' : false,
-                    'showControls' : false,
-                    'centerMarkers' : false
-                    });
+        $(function(){
+            $('#slider li').each(function(){
+                if ($(this).children().length == 0) $(this).remove();
             });
+            
+            $('#slider').bjqs({
+                'width' : 750,
+                'height' : 270,
+                'animationDuration': 1500,
+                'animation': 'slide',
+                'showMarkers' : false,
+                'showControls' : false,
+                'centerMarkers' : true
+                });
+        });
         </script>
     {% endaddtoblock %}
     

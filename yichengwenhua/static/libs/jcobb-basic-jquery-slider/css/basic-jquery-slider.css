@@ -8,7 +8,7 @@ ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
 ol.bjqs-markers{list-style:none;margin:0;padding:0;z-index:9999;}
 ol.bjqs-markers li{float:left;}
 
-p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
+p.bjqs-caption{display:block;width:100%;position:absolute;top:0;left:0;}
 
 #container{
   width:980px;
@@ -46,9 +46,10 @@ a.bjqs-next{
 }
 
  p.bjqs-caption{
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.3);
   color:#fff;
-  text-align:center;
+  font-size:25px;
+  padding:10px;
 }
 
  ol.bjqs-markers{
