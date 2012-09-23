@@ -7,7 +7,7 @@
 
     {% addtoblock "css" %}
         <link href="{{ STATIC_URL }}css/heritage.css" media="screen" rel="stylesheet" type="text/css" />
-        <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet">
+        <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet" />
         <link rel="stylesheet" href="{{ STATIC_URL }}libs/lightbox/css/lightbox.css" type="text/css" media="screen" />
     {% endaddtoblock %}
 
@@ -33,16 +33,16 @@
         <div id="sidebar">
             
             {% block heritage-sidebar %}
-            <ul class="kwicks">
+            <ul>
                 {% for page in request.current_page.get_root.children.all %}
-                <li id="kwick_{{ forloop.counter }}">
+                <li>
                     <a href="{{ page.get_absolute_url }}">
-                        <div class="sidebar-title-wrapper1">
+                        <span class="sidebar-title-wrapper1">
                         <div class="sidebar-title-wrapper2">
                         <div class="sidebar-title" style="background-image:url(/static/img/ycwh/heritage-titles.png); background-position:0px -{% mul forloop.counter0 40 %}px">
                         </div>
                         </div>
-                        </div>
+                        </span>
                         
                         {% comment %}
                         <div class="sidebar-title-intro">
