@@ -7,7 +7,7 @@
 .section-title { padding:10px 0 10px 0; }
 .section-title>div { border-left:3px solid yellow; }
 
-#sidebar { text-align:center; float:left; display:inline; width:300px; /*background-color:#9c181b;*/ //margin-right:10px; padding:10px; font-size:25px; }
+#sidebar { text-align:center; float:left; display:inline; width:300px; /*background-color:#9c181b;*/ padding:10px; font-size:25px; }
 
 #sidebar a:hover { color:yellow; }
 #sidebar a { color:white; }
@@ -38,10 +38,10 @@
 #sidebar h3 { height:40px; }
 
 .sidebar-title-wrapper1 { display:block; background-image:url(/static/img/ycwh/heritage-title-frame-l60.png); background-position:left; background-repeat:no-repeat; }
-.sidebar-title-wrapper2 { display:block; padding:9px 0; height:40px; border:1px solid yellow; background-image:url(/static/img/ycwh/heritage-title-frame60.png); background-position:right; background-repeat:no-repeat; }
+.sidebar-title-wrapper2 { display:block; padding:9px 0; height:40px; border:1px solid #f1ce4c; background-image:url(/static/img/ycwh/heritage-title-frame60.png); background-position:right; background-repeat:no-repeat; }
 .sidebar-title { display:block; width:240px; height:40px; margin: 0 auto; }
 
-#heritage-title { position:relative; padding:10px 0 10px 20px; border-left:1px solid #9c181b; color:yellow; font-size:40px; font-weight:normal; background:#9c181b; /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#831114), color-stop(100%,#9c181b));*/ }
+#heritage-title { position:relative; padding:10px 0 10px 20px; border-left:1px solid #9c181b; font-size:40px; font-weight:normal; background:#9c181b; /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#831114), color-stop(100%,#9c181b));*/ }
 
 #heritage-intro { }
  
@@ -70,9 +70,4 @@
 #heritage-link-list { padding:20px; }
 .heritage-link { font-size:25px; margin:5px 0; }
 .heritage-link a:hover { text-decoration:underline; }
-
-
-/* for kwicks add-on */
-.kwicks { list-style:none; position:relative; }
-.kwicks li{ width:300px; height:400px; display:block; overflow:hidden; padding:0;  /* if you need padding, do so with an inner div (or implement your own box-model hack) */ }
 
