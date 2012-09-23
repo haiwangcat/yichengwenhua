@@ -38,8 +38,8 @@
 #sidebar h3 { height:40px; }
 
 .sidebar-title-wrapper1 { display:block; background-image:url(/static/img/ycwh/heritage-title-frame-l60.png); background-position:left; background-repeat:no-repeat; }
-.sidebar-title-wrapper2 { padding:9px 0; height:40px; border:1px solid yellow; background-image:url(/static/img/ycwh/heritage-title-frame60.png); background-position:right; background-repeat:no-repeat; }
-div.sidebar-title { width:240px; height:40px; margin: 0 auto; }
+.sidebar-title-wrapper2 { display:block; padding:9px 0; height:40px; border:1px solid yellow; background-image:url(/static/img/ycwh/heritage-title-frame60.png); background-position:right; background-repeat:no-repeat; }
+.sidebar-title { display:block; width:240px; height:40px; margin: 0 auto; }
 
 #heritage-title { position:relative; padding:10px 0 10px 20px; border-left:1px solid #9c181b; color:yellow; font-size:40px; font-weight:normal; background:#9c181b; /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#831114), color-stop(100%,#9c181b));*/ }
 
