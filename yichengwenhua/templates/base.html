@@ -16,15 +16,14 @@
 
     {% cms_toolbar %}
 
-    <div id="header"> <img src="/static/img/ycwh/tfjy.png" alt="唐风晋韵" /> </div>
+    <div id="header">
+        <img src="/static/img/ycwh/tfjy.png" alt="唐风晋韵" />
+        <ul id="header-menu">
+        {% show_menu 0 0 100 100 %}
+        </ul>
+    </div>
 
-    <div id="main-panel">
-        <div id="menu">
-            <ul class="dropdown">
-                {% show_menu 0 100 100 100 %}
-            </ul>
-        </div> 
-          
+    <div id="main-panel">          
         <ul id="nav">
             {% show_breadcrumb %}
         </ul>
@@ -47,6 +46,8 @@
                 </td>
                 </tr>
             </table>
+            
+            <a href="#" id="to-top">返回顶部<a>
         </div>
     </div>
     

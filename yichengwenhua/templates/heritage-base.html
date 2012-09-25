@@ -6,9 +6,9 @@
 {% block "content" %}
 
     {% addtoblock "css" %}
-        <link href="{{ STATIC_URL }}css/heritage.css" media="screen" rel="stylesheet" type="text/css" />
         <link type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet" />
         <link rel="stylesheet" href="{{ STATIC_URL }}libs/lightbox/css/lightbox.css" type="text/css" media="screen" />
+        <link href="{{ STATIC_URL }}css/heritage.css" media="screen" rel="stylesheet" type="text/css" />
     {% endaddtoblock %}
 
     {% addtoblock "js" %}
@@ -63,23 +63,32 @@
             {% block "heritage-main-content" %}
             
             <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
-                <div id="heritage-title">
-                    {{ request.current_page.get_title }}
-                    {% placeholder "heritage-intro" %}
-                    {% if request.current_page|isNationalHeritage %}
-                        <img src="/static/img/logo/China_Intangible_Cultural_Heritage_Logo.png">
-                    {% endif %}
-                    <div id="heritage-intro">
-                    </div>
-                </div>
+                <!--div id="heritage-intro"> </div-->
                 <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-                    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1">介绍</a></li>
-                    {% if request.current_page|hasImages %}
-                    <li class="ui-state-default ui-corner-top"><a href="#tabs-2">图片</a></li>
-                    {% endif %}
+                    <div id="heritage-title">
+                        {{ request.current_page.get_title }}
+                        {% placeholder "heritage-intro" %}
+                        {% comment %}
+                        {% if request.current_page|isNationalHeritage %}
+                            <img src="/static/img/logo/China_Intangible_Cultural_Heritage_Logo.png">
+                        {% endif %}
+                        {% endcomment %}
+                    </div>
+                    
+                    <li class="ui-state-default ui-corner-top">
                     {% if request.current_page|hasVideos %}
-                    <li class="ui-state-default ui-corner-top"><a href="#tabs-3">视频</a></li>
+                        <a href="#tabs-3">视频</a></li>
+                    {% else %}
+                        <p class="disabled-tab">视频</p>
                     {% endif %}
+                    <li class="ui-state-default ui-corner-top">
+                    {% if request.current_page|hasImages %}
+                        <a href="#tabs-2">图片</a>
+                    {% else %}
+                        <p class="disabled-tab">图片</p>
+                    {% endif %}
+                    </li>
+                    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1">介绍</a></li>
                 </ul>
                 <div id="tabs-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
                     {% placeholder "heritage-image" %}
@@ -87,7 +96,7 @@
                 </div>
                 <div id="tabs-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
                     
-                    <ul id="image-area">正在加载图片...</ul>
+                    <ul id="image-area"><p>正在加载图片...</p></ul>
 
                 </div>
                 <div id="tabs-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">

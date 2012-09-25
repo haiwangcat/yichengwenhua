@@ -26,16 +26,16 @@ background-image:url(/static/img/ycwh/bg-2.jpg); background-position:top; backgr
 
 body a { text-decoration:none; }
 
-#main-panel { color:white; margin:0 auto; position:relative; width:1080px; z-index:1; background-color:#b35f25; border:1px solid orange; }
+#main-panel { color:white; margin:0 auto; position:relative; width:1080px; z-index:1; /*background-color:#b35f25;*/ border:1px solid orange; }
 
-#header { width:1080px; display:block; height:250px; margin:auto; padding:10px 0 0 0; }
+#header { position:relative; width:1080px; display:block; height:250px; margin:auto; padding:10px 0 0 0; }
 
-#footer { display:block; width:1080px; height:100px; background-color:#84716b; border-top:1px solid orange; }
+#footer { display:block; width:1080px; height:100px; background-color:rgb(132,113,107); background-color:rgba(132,113,107,0.7); border-top:1px solid orange; position:relative; }
 #footer-img { display:block; width:1080px; height:200px; margin:auto; background-image:url(/static/img/ycwh/footer.jpg); background-position:bottom; background-repeat:no-repeat; }
 #footer table { margin:15px auto; }
 #footer table td { padding:0 10px; }
 
-#menu { display:block; height:40px; line-height:40px; background-color:#9c181b; background-position:center; background-repeat:no-repeat; font-size:17px; }
+#menu { display:block; height:40px; line-height:40px; background-color:rgb(156,24,27); /*background-color:rgba(156,24,27,0.7);*/ background-position:center; background-repeat:no-repeat; font-size:17px; }
 #menu ul { margin:0; }
 #menu .menuitem{ width:90px; }
 #menu a, #nav a { text-decoration:none; }
@@ -44,46 +44,26 @@ body a { text-decoration:none; }
 #menu .menuitem a, #nav a { color:white; }
 #menu .selected>a, #menu .ancestor>a { color:yellow; }
 
+#header-menu { width:550px; height:80px; position:absolute; top:15px; right:0px; color:white; display:block; background-color:rgb(156,24,27); }
+#header-menu li { width:110px; height:40px; line-height:40px; text-align:center; float:left; }
+#header-menu a { text-decoration:none; color:white; }
 
-/* For menu */
+#header-menu, #header-menu li { outline:1px solid #e38627; }
+#header-menu { outline-width:7px; }
+#header-menu a:hover { text-decoration:underline; }
 
-/* LEVEL ONE */
 
-ul.dropdown { position:relative; }
-ul.dropdown li { font-weight:normal; float:left; background:#9c181b; text-align:center; }
-ul.dropdown a:hover { color:#000; }
-ul.dropdown a:active { color:yellow; }
-ul.dropdown li a { display:block; color:#222; }
-ul.dropdown li:last-child a { border-right:none; }
-/* Doesn't work in IE */
-ul.dropdown li.hover, ul.dropdown li:hover { /*background:#F3D673;*/ color:black; position:relative; }
-ul.dropdown li.hover a { color:black; }
-
-/* LEVEL TWO */
-ul.dropdown ul { width:220px; visibility:hidden; z-index:2; position:absolute; top:100%; left:0; }
-ul.dropdown ul li { font-weight:normal; background:#9c181b; color:#000; border-top:1px solid #ccc; float:none; }              
-/* IE 6 & 7 Needs Inline Block */
-ul.dropdown ul li a { border-right:none; width:100%; display:inline-block; }
-
-/* LEVEL THREE */
-ul.dropdown ul ul { left:100%; top:0; }
-/*ul.dropdown li:hover > ul { visibility:visible; }*/
-
-/*
-.submenu { position:relative; //visibility:hidden; padding:10px 0 0 0; background-color:#2A170D; z-index:2; border-bottom-left-radius:4px; border-bottom-right-radius:4px; } 
-
-.submenu ul { list-style-type:none; padding:0; border:0; }
-.submenu li { display:list-item; padding:0 0 10px 0; }*/
-
-#nav { position:relative; display:block; height:40px; line-height:40px; text-align:center; background-color:#84716b; /*border-top:1px solid orange;*/ color:white; z-index:1; font-size:17px; padding:0 10px; border-bottom:1px solid orange; border-top:1px solid orange; }
+#nav { position:relative; display:block; height:40px; line-height:40px; text-align:center; background-color:rgb(132,113,107); /*background-color:rgba(132,113,107,0.7); border-top:1px solid orange;*/ color:white; z-index:1; font-size:17px; padding:0 10px; border-bottom:1px solid orange; }
 #nav li { display:table-cell; overflow:hidden; padding-left:10px; }
 
-.main-area { overflow:auto; width:1078px; padding-bottom:20px; }
+.main-area { overflow:auto; width:100%; padding-bottom:20px; background-color:#9a4b13; }
 .main-area a { color:white; }
 .main-area a:hover h3 { color:yellow; }
 .main-area table { text-align:center; }
 .main-area table td { padding:10px; }
 .main-area table, .main-area table td { border:1px solid; border-collapse:collapse; }
+
+#to-top { color:white; position:absolute; top:5px; right:5px; font-size:15px; }
 
 #footer-img { width:100%; height:400px; background-image:url(/static/img/ycwh/footer.jpg); background-position:bottom; position:absolute; bottom:0px; margin:auto 0; }
 
